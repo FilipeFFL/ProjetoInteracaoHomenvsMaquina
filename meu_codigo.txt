@@ -1,3 +1,110 @@
 Esse é meu primeiro código no GitHub
 
 Estes são os códico inicial do meu Projeto InteracaoHomenvsMaquina
+
+# INÍCIO DO CÓDIGO.
+# BASE
+de  importação aleatória  randint 
+computador  =  randint ( 0 , 15 )
+
+# INTERATIVIDADE DO COMPUTADOR COM O USUÁRIO.
+
+imprimir ( ' ' )
+print ( '-=-'  *  20 )
+print ( 'Olá, amigo!' )
+print ( 'Sou seu Computador' )
+print ( 'Vou pensar em um número entre 0 e 15, tente adivinhar...' )
+print ( 'Será que você consegue ADIVINHAR qual foi?' )
+print ( '-=-'  *  20 )
+
+# COMPUTADOR FAZ A PERGUNTA AO USUÁRIO.
+
+acertou  =  Falso
+palpitações  =  0
+enquanto  não  acertou :
+    jogador  =  int ( input ( 'Qual vai ser o seu palpite?:' ))
+    palpitações  += 1
+    if  jogador  ==  computador :
+        acertou  =  Verdadeiro
+    mais :
+        if  jogador  <  computador :
+            print ( 'Mais... Tente mais uma Vez VOCÊ CONSEGUE!' )
+        elif  jogador  >  computador :
+            print ( 'Menor... Tente mais uma vez VOCÊ CONSEGUE!' )
+print ( 'PARABÉNS! Acertou com {}tentativas.' . format ( palpites ) )
+imprimir ( ' ' )
+print ( '-=-'  *  20 )
+print ( '....===PARABÉNS, A DESCONTRAÇÃO É UMA FORMA CORRETA DE ENFRENTAR O MEDO!===...' )
+print ( 'Se você chegou até aqui, você é capaz de enfrentrar seus obstáculos.' )
+print ( '-=-'  *  20 )
+print ( 'Fim de jogo!' )
+imprimir ( ' ' )
+print ( '-=-'  *  20 )
+print ( 'Agora vamos para próxima etapa, VOCÊ É BOM DE RACIOCÍNIO?' )
+
+perguntas  = {
+
+    'questão 01' : {
+        'pergunta' : 'Se Alice entrou 05 vezes em sua casa, quantas vezes ela saiu?' ,
+        'respostas' :{
+            'a' : 'Alice Saiu 05 Vezes?' ,
+            'b' : 'Alice Saiu 04 Vezes?' ,
+            'c' : 'Alice Saiu 03 Vezes?' ,
+            'd' : 'Alice Saiu 02 Vezes?' },
+             'resposta_certa' : 'b' ,
+    },
+'questão 02' :{
+        'pergunta' : 'Quando eu tinha 8 anos, a minha irmã tinha a metade da minha idade. Agora que tenho 55 anos, com quantos anos minha irmã está?' ,
+        'respostas' :{
+            'a' : 'Minha irmã está com 51 anos?' ,
+            'b' : 'Minha irmã está com 53 anos?' ,
+            'c' : 'Minha irmã está com 27 anos?' ,
+            'd' : 'Minha irmã está com 56 anos?' },
+             'resposta_certa' : 'a' ,
+
+    },
+    'questão 03' :{
+        'pergunta' : 'Há 7 passarinhos em um galho de árvore. Um menino atira em um deles, quantos passarinhos sobraram no galho?' ,
+        'respostas' :{
+            'a' : 'Ficaram 06 passarinhos?' ,
+            'b' : 'O Menino atirou nos outros?' ,
+            'c' : 'O Galho Quebou?' ,
+            'd' : 'Não ficou Nenhum, porque os outros fugiram assustados' },
+             'resposta_certa' : 'd' ,
+
+    },
+     'questão 04' :{
+        'pergunta' : 'Há um pato entre dois patos, um pato atrás de um pato e um pato na frente de outro pato. De quantos patos estamos falando?' ,
+        'respostas' :{
+            'a' : '2 patos.' ,
+            'b' : '3 patos.' ,
+            'c' : '4 patos.' ,},
+             'resposta_certa' : 'b' ,
+
+    },
+}
+imprimir ( ' ' )
+print ( '-=-'  *  20 )
+print ( "SEGUNDA ETAPA, chegou a hora de MATAR A CHARADA! \n " )
+respostas_certas  =  0
+
+para  pk , pv  em  perguntas . itens ():
+    print ( f' { pk } : { pv [ "pergunta" ] } ' )
+
+    para  rk , rv  em  pv [ 'respostas' ]. itens ():
+        print ( f' { rk } ) { rv }  \n ' )
+    imprimir ()
+
+resposta_user  =  input ( 'Sua resposta:' )
+
+if  resposta_user  ==  pv [ 'resposta_certa' ]:
+    print ( 'resposta certa!' )
+mais :
+    print ( 'Você errou!' )
+imprimir ()
+
+qtd_perguntas  =  len ( perguntas )
+percentual  =  respostas_certas / qtd_perguntas  * 100   
+
+print ( f"Você acertou { respostas_certas } resposta." )
+print ( f'sua gostou de acerto foi { percentual } %' )
