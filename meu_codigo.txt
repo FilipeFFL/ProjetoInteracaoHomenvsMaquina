@@ -38,8 +38,7 @@ print ( '....===PARABÉNS, A DESCONTRAÇÃO É UMA FORMA CORRETA DE ENFRENTAR O 
 print ( 'Se você chegou até aqui, você é capaz de enfrentrar seus obstáculos.' )
 print ( '-=-'  *  20 )
 print ( 'Fim de jogo!' )
-imprimir ( ' ' )
-print ( '-=-'  *  20 )
+imprimir ( ' ' 
 print ( 'Agora vamos para próxima etapa, VOCÊ É BOM DE RACIOCÍNIO?' )
 
 perguntas  = {
@@ -80,31 +79,3 @@ perguntas  = {
             'b' : '3 patos.' ,
             'c' : '4 patos.' ,},
              'resposta_certa' : 'b' ,
-
-    },
-}
-imprimir ( ' ' )
-print ( '-=-'  *  20 )
-print ( "SEGUNDA ETAPA, chegou a hora de MATAR A CHARADA! \n " )
-respostas_certas  =  0
-
-para  pk , pv  em  perguntas . itens ():
-    print ( f' { pk } : { pv [ "pergunta" ] } ' )
-
-    para  rk , rv  em  pv [ 'respostas' ]. itens ():
-        print ( f' { rk } ) { rv }  \n ' )
-    imprimir ()
-
-resposta_user  =  input ( 'Sua resposta:' )
-
-if  resposta_user  ==  pv [ 'resposta_certa' ]:
-    print ( 'resposta certa!' )
-mais :
-    print ( 'Você errou!' )
-imprimir ()
-
-qtd_perguntas  =  len ( perguntas )
-percentual  =  respostas_certas / qtd_perguntas  * 100   
-
-print ( f"Você acertou { respostas_certas } resposta." )
-print ( f'sua gostou de acerto foi { percentual } %' )
