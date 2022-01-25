@@ -1,18 +1,22 @@
-# BASE
-# INÍCIO DO CÓDIGO.
+# Base
+# Ínicio do Códico.
+
+# PRIMEIRA ETAPA.
+
 from random import randint
 computador = randint(0,15)
 
-# INTERATIVIDADE DO COMPUTADOR COM O USUÁRIO.
-# PRIMEIRA ETAPA.
+# Intergridade do Computador com o Usuário.
+# Nessa parte o Computador interage com o Usuário, se apresentando e chamando o usuáro para íniciar o jogo.
 
 print(' ')
 print('-=-' * 20)
-print('Olá, Amigo!')
-print('Sou seu Computador')
-print('Vou pensar em um número entre 0 e 15, tente adivinhar...')
-print('Será que você consegue ADIVINHAR qual foi?')
+print('''OLÁ, AMIGO
+SOU SEU COMPUTADOR 
+VOU PENSAR EM UM NÚMERO ENTRE 0 E 15, TENTE ADIVINHAR...
+SERÁ QUE VOCÊ CONSEGUE ADIVINHAR QUAL SERÁ ESSE NÚMERO?''')
 print('-=-' * 20)
+print(' ')
 
 # COMPUTADOR FAZ A PERGUNTA AO USUÁRIO / USUÁRIO DA SEU PALPITE .
 
