@@ -1,0 +1,55 @@
+/*
+Mt@Arteinterativa
+Projeto:  Placa Wemos D1 Wifi ESP8266
+By: Setor TI
+Data do projeto: 03/07/2024
+Atualizado: 0/0/2024
+Tecnico: Filipe
+Site: 
+*/
+
+//==========================================================================
+//=================> Declarações
+//=================> ctrl + u = verifica o código
+//=================> variável:
+
+//==========================================================================
+//=================>  ESP8266 na IDE
+//================= http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+#include <ESP8266WiFi.h>
+//Nome da rede que seu arduino ira se conectar 
+const char* ssid = "lp";
+ //Senha da rede que seu arduino ira se conecta
+const char* password = "01012345";
+
+void setup() {
+    pinMode(LED_BUILTIN, OUTPUT);
+    //------->
+  Serial.begin(115200);
+  delay (10);
+  
+// Conectando ao WiFi
+  Serial.println();
+  Serial.print("Conectado a");
+  Serial.println(ssid);
+
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() !=WL_CONNECTED){
+    delay(500);
+    Serial.print(".");
+  }
+  
+  Serial.println("");
+  Serial.println("WiFi Conectado");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, LOW); 
+  delay(100);
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(100); 
+}
